@@ -19,10 +19,12 @@ function mount(sharepath, cb) {
 		function handleShellResult(err, stdout, stderr) {
 			cb(stderr, getMountedPath());
 		}
-	)	
+	)
 }
 
 function umount(cb) {
+	var p = getMountedPath();
+	if (!p) throw new Error("Cannot unmount an undefined path");
 	Shell('umount ' + getMountedPath(), function(err, stdout, stderr) {
 		cb(stderr);
 	});
