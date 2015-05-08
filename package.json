@@ -1,7 +1,7 @@
 {
-  "name": "mount-smbfs-osx",
+  "name": "mount-smbfs",
   "version": "0.1.0",
-  "description": "Mount Samba shares, with Finder's 'Connect to Server' authentication.",
+  "description": "Mount Samba shares, handle authentication with Finder",
   "main": "index.js",
   "author": "Andy Merskin <docmars@gmail.com>",
   "license": "MIT",
