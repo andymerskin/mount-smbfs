@@ -3,7 +3,7 @@ var path = require('path');
 var Shell = require('child_process').exec;
 var Step = require('step');
 
-var VOLUMES = '/Volumes/';
+var VOLUMES = '/Volumes';
 var SHARE;
 
 function mount(sharepath, cb) {
