@@ -10,6 +10,21 @@ smbfs.mount('MACHINE/ShareName', function(err, mountPath) {
 });
 ```
 
+## Documentation
+
+### mount(sharepath, callback)
+Mounts the specified share path to a Volume, and displays Finder's authentication if credentials are necessary.
+
+### umount(callback)
+Unmounts the currently mounted share.
+
+### getPath()
+Returns the volume path string, e.g. `/Volumes/SharedFolder`
+
+#### Arguments
+* `sharepath`: The full share path to connect to, e.g. `MACHINE/SharedFolder`
+* `callback(err, mountpath)`: Where `mountpath` is the resulting volume path string: `/Volumes/SharedFolder`
+
 ## Example: mount a share & get a list of files
 ```javascript
 var smbfs = require('mount-smbfs');
