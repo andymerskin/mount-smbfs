@@ -37,6 +37,9 @@ smbfs.mount('MACHINE/ShareName', function(err, mountPath) {
 });
 ```
 
+## Contributors
+Please feel free to post any issues you find, hack around, present suggestions, etc.!
+
 ## License
 The MIT License (MIT)
 
