@@ -1,5 +1,9 @@
 # mount-smbfs
-## Mount Samba shares via Finder on OSX
+### Mount Samba shares via Finder on OSX
+* Uses Finder to handle authentication dialogs
+* Fires a callback once connected / authenticated
+* Use the Volume path with `fs` to perform file/folder ops like you normally would
+* Useful for creating desktop apps within internal environments that use file shares
 
 ## Usage
 ```javascript
