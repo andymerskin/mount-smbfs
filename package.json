@@ -3,8 +3,18 @@
   "version": "0.1.0",
   "description": "Mount Samba shares, handle authentication with Finder",
   "main": "index.js",
-  "author": "Andy Merskin <docmars@gmail.com>",
-  "license": "MIT",
+  "author": "Andy Merskin",
+  "license": {
+  	"type": "MIT",
+  	"url": "https://raw.githubusercontent.com/docmars/mount-smbfs/master/LICENSE"
+  	},
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/docmars/mount-smbfs"	
+	},
+	"bugs": {
+		"url": "https://github.com/docmars/mount-smbfs/issues"
+	},
   "dependencies": {
     "step": "0.0.5"
   }
