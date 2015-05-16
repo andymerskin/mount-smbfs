@@ -3,11 +3,21 @@ var path = require('path');
 var Shell = require('child_process').exec;
 
 var VOLUMES = '/Volumes';
-var SHARE;
+var SHARE = null;
 
 function mount(sharepath, cb) {
 	SHARE = sharepath;
+	var command =
+		['osascript -e \'mount volume "smb://',
+		path.normalize(SHARE),
+		"\"'"];
+	Shell(command.join(''), function(err, stdout, stderr) {
+		var mountpath;
+		if (!stderr && !err) {
+			mountpath = getMountedPath();
 		}
+		cb(stderr, mountpath);
+	});
 }
 
 function umount(cb) {
