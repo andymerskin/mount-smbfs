@@ -20,10 +20,15 @@ function mount(sharepath, cb) {
 	});
 }
 
-function umount(cb) {
-	var p = getMountedPath();
-	if (!p) throw new Error("Cannot unmount an undefined path");
-	Shell('umount ' + getMountedPath(), function(err, stdout, stderr) {
+function umount(mountpath, cb) {
+	if (typeof cb === undefined) {
+		cb = mountpath;
+	}
+	mountpath = mountpath || getMountedPath()
+	if (!mountpath) {
+		throw new Error("Cannot unmount an undefined path");
+	}
+	Shell('umount ' + mountpath, function(err, stdout, stderr) {
 		cb(stderr);
 	});
 }
