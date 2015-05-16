@@ -29,6 +29,9 @@ function umount(cb) {
 }
 
 function getMountedPath() {
+	if (!SHARE) {
+		return undefined;
+	}
 	return path.join(VOLUMES, path.basename(SHARE));
 }
 
