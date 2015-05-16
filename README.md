@@ -21,8 +21,9 @@ Mounts the specified share path to a Volume, and displays Finder's authenticatio
 * `sharepath`: The full share path to connect to, e.g. `MACHINE/SharedFolder`
 * `callback(err, mountpath)`: Where `mountpath` is the resulting volume path string: `/Volumes/SharedFolder`
 
-### umount(callback)
-Unmounts the currently mounted share.
+### umount([mountpath], callback)
+Unmounts the specified path, or defaults to the currently mounted share if `mountpath` isn't provided.
+* `mountpath`: The volume path you want to unmount: `/Volumes/SharedFolder`
 * `callback(err)`
 
 ### getPath()
