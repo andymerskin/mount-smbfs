@@ -15,7 +15,5 @@
 	"bugs": {
 		"url": "https://github.com/docmars/mount-smbfs/issues"
 	},
-  "dependencies": {
-    "step": "0.0.5"
-  }
+  "dependencies": {}
 }
